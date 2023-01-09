@@ -1,5 +1,5 @@
 ## Tech Stack
-  - create react app
   - Typescript
+  - CRA
   - styled-components
 
