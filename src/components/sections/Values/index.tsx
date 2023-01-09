@@ -8,8 +8,8 @@ const Values = () => {
       <p>Ridiculus laoreet libero pretium et, sit vel elementum convallis fames. Sit suspendisse etiam eget egestas. Aliquet odio et lectus etiam sit.</p>
       <p>In mauris rutrum ac ut volutpat, ornare nibh diam. Montes, vitae, nec amet enim.</p>
       <ul>
-        {DATA_VALUES.map(({title, desc}, key) => (
-          <li>
+        {DATA_VALUES.map(({title, desc}, index) => (
+          <li key={index}>
             <h5><span/>{title}</h5>
             <p>{desc}</p>
           </li>

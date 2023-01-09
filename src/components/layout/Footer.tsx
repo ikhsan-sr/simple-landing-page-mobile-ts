@@ -1,39 +1,9 @@
 import { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { StyledFooter } from './styles';
 
-const DATA = {
-  address: "Jl. Lembong No 8 Kel. Braga Kec. Sumur Bandung, Kota Bandung, Jawa Barat",
-  links: [
-    {
-      title: 'Who We Are',
-      link: '#',
-    },
-    {
-      title: 'Our Values',
-      link: '#',
-    },
-    {
-      title: 'The Perks',
-      link: '#',
-    },
-  ],
-  options: [
-    {
-      title: 'Technology department',
-      value: '1',
-    },
-    {
-      title: 'Finances department',
-      value: '2',
-    },
-    {
-      title: 'Education department',
-      value: '3',
-    },
-  ]
-}
+import { DATA } from './const';
+import { StyledFooter } from './styles';
 
 interface OptionItem {
   title: string;
@@ -65,8 +35,8 @@ const Footer = () => {
               onChange={handleChange}
               className="select-box"
             >
-              {DATA.options.map((item: OptionItem) => (
-                <MenuItem value={item.value}>{item.title}</MenuItem>
+              {DATA.options.map((item: OptionItem, index) => (
+                <MenuItem value={item.value} key={index}>{item.title}</MenuItem>
               ))}
             </Select>
             <address>{DATA.address}</address>
