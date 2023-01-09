@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
 import Hero from '../components/sections/Hero';
 import Introduction from '../components/sections/Introduction';
-import Services from '../components/sections/Services';
+import Specialization from '../components/sections/Specialization';
 import Values from '../components/sections/Values';
 
 const Homepage = () => {
@@ -10,7 +10,7 @@ const Homepage = () => {
       <Hero />
       <Introduction />
       <Values />
-      <Services />
+      <Specialization />
     </Layout>
   )
 }

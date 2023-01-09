@@ -19,12 +19,22 @@ const Introduction = () => {
   
   const gotoNext = () => {
     sliderRef.current.slickNext();
-    setActiveSlide(activeSlide + 1);
+
+    if (activeSlide < DATA.length) {
+      setActiveSlide(activeSlide + 1);
+    } else {
+      setActiveSlide(1);
+    }
   }
     
   const gotoPrev = () => {
     sliderRef.current.slickPrev()
-    setActiveSlide(activeSlide - 1);
+    
+    if (activeSlide > 1) {
+      setActiveSlide(activeSlide - 1);
+    } else {
+      setActiveSlide(DATA.length);
+    }
   }
 
   return (
@@ -38,6 +48,7 @@ const Introduction = () => {
           </div>
         ))}
       </Slider>
+
       <Grid container>
         <Grid item xs={6}>
           <span className="active">{activeSlide}</span>
