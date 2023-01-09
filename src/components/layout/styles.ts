@@ -25,7 +25,7 @@ export const StyledHeader = styled.div`
   
   .menu {
     width: 60px;
-    margin-top: 12px;
+    margin: 12px 0;
   }
 `;
 

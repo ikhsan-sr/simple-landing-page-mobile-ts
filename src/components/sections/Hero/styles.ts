@@ -44,6 +44,7 @@ export const StyledHero = styled.div`
 
     p {
       font-size: 16px;
+      color: white;
     }
   }
 

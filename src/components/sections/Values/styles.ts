@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledValues = styled.div`
   padding: 56px 25px 0 25px;
   list-style-type: none;  
+  background: #F8F8F8;
 
   h1 {
     text-align: center;
